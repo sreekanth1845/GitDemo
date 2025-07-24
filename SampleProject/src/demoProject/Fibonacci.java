@@ -4,18 +4,24 @@ public class Fibonacci {
 
 	public static void main(String[] args) {
 
-		int num1 = 1;
-		int num2 = 10;
+		fibonacci(5);
+		
+
+	}
+
+	public static void fibonacci(int num) {
 		int a = 0;
 		int b = 1;
+		int c = 0;
 
-		for (int i = num1; i <= num2; i++) {
-			System.out.print(a + ",");
-			int c = a + b;
+		for (int i = 1; i <= num; i++) {
+			System.out.println(a);
+			c = a + b;
 			a = b;
 			b = c;
 		}
-
+		
+		System.out.println("Sum of fibonacci:" + c);
 	}
 
 }

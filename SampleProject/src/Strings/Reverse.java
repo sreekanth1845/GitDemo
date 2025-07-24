@@ -6,12 +6,12 @@ public class Reverse {
 
 	public static void main(String[] args) {
 
-		reverseString();
-		reverseEachCharacter();
-		reverseEachWord();
+		reverseString(str);
+		reverseEachCharacter(str);
+		reverseEachWord(str);
 	}
 
-	public static void reverseString() {
+	public static void reverseString(String str) {
 		String revString = "";
 
 		for (int i = str.length() - 1; i >= 0; i--) {
@@ -20,7 +20,7 @@ public class Reverse {
 		System.out.println("reverseString:" + revString);
 	}
 
-	public static void reverseEachCharacter() {
+	public static void reverseEachCharacter(String str) {
 
 		String[] words = str.split("\\s");
 
@@ -28,6 +28,7 @@ public class Reverse {
 
 		for (int i = 0; i < words.length; i++) {
 			String word = words[i];
+			
 			String revWord = "";
 
 			for (int j = word.length() - 1; j >= 0; j--) {
@@ -39,7 +40,7 @@ public class Reverse {
 
 	}
 
-	public static void reverseEachWord() {
+	public static void reverseEachWord(String str) {
 
 		String revString = "";
 
