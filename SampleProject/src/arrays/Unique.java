@@ -17,7 +17,7 @@ public class Unique {
 		for (int i = 0; i <= a.length - 1; i++) {
 			int count = 0;
 			if (!arrayList.contains(a[i])) {
-				arrayList.add(i);
+				arrayList.add(a[i]);
 				count++;
 
 				for (int j = i + 1; j <= a.length - 1; j++) {
@@ -29,7 +29,7 @@ public class Unique {
 //				System.out.println(count);
 
 				if (count == 1)
-					System.out.println(a[i] + "is unique number");
+					System.out.println(a[i] + " is unique number");
 			}
 		}
 	}

@@ -6,6 +6,8 @@ public class CharCount {
 
 	public static void main(String[] args) {
 
+		countString("sree", 'e');
+
 		String str = "My name is Srikanth";
 		int count = 0;
 
@@ -21,6 +23,17 @@ public class CharCount {
 		}
 		System.out.println(charCount);
 
+	}
+
+	private static void countString(String s1, char s2) {
+		int count = 0;
+
+		for (int i = 0; i <= s1.length() - 1; i++) {
+			if (s1.charAt(i) == s2) {
+				count++;
+			}
+		}
+		System.out.println(count);
 	}
 
 }
