@@ -13,17 +13,16 @@ public class Factorial {
 
 		int fact = 1;
 
-		for (int i = 1; i <= num; i++) {
+		for (int i = 1; i <= num; i++)
 			fact = fact * i;
-		}
+
 		return fact;
 	}
 
 	private static int recFactorial(int num) {
 
-		if (num == 1 || num == 0) {
+		if (num == 1 || num == 0)
 			return 1;
-		}
 
 		return num * recFactorial(num - 1);
 	}
