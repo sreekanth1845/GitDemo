@@ -21,9 +21,11 @@ public class CompareArray {
 				arrayList.add(a[i]);
 		}
 
-		Object[] array = arrayList.toArray();
+		System.out.println(arrayList);
+		
+		//Object[] array = arrayList.toArray();
 
-		for (Object obj : array) {
+		for (Object obj : arrayList.toArray()) {
 			System.out.println(obj);
 		}
 	}
