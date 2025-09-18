@@ -5,8 +5,6 @@ public class Fibonacci {
 	public static void main(String[] args) {
 
 		fibonacci(5);
-		
-
 	}
 
 	public static void fibonacci(int num) {
@@ -20,7 +18,7 @@ public class Fibonacci {
 			a = b;
 			b = c;
 		}
-		
+
 		System.out.println("Sum of fibonacci:" + c);
 	}
 

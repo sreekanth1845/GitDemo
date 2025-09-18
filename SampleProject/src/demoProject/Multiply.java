@@ -1,4 +1,4 @@
-package arrays;
+package demoProject;
 
 public class Multiply {
 
