@@ -16,7 +16,5 @@ public class SubstringFinder {
 				System.out.println(str.substring(i, j + 1));
 			}
 		}
-
 	}
-
 }

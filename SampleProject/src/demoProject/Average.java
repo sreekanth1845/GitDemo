@@ -12,9 +12,7 @@ public class Average {
 		}
 
 		double avg = sum / num.length;
-
 		System.out.println(avg);
 
 	}
-
 }

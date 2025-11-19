@@ -8,7 +8,7 @@ public class CharCount {
 	public static void main(String[] args) {
 
 		duplicateCharacters("My name is Srikanth");
-		FirstNonRepeatedCharacter("Mummy");
+		firstNonRepeatedCharacter("mummy");
 
 		countString("sree", 'e');
 
@@ -32,32 +32,35 @@ public class CharCount {
 	private static void duplicateCharacters(String str) {
 		HashMap<Character, Integer> map = new HashMap<>();
 
-		//char[] arr = str.toCharArray();
+		// char[] arr = str.toCharArray();
 
 		for (char ch : str.toCharArray())
 			map.put(ch, map.getOrDefault(ch, 0) + 1);
 
 		for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-			
-			//System.out.println(entry.getKey() + "=" + entry.getValue());		//for all characters
-			
-			if (entry.getValue() > 1)											//for duplicate characters
+
+			// System.out.println(entry.getKey() + "=" + entry.getValue()); //for all
+			// characters
+
+			if (entry.getValue() > 1) // for duplicate characters
 				System.out.println(entry.getKey() + "=" + entry.getValue());
 		}
 	}
-	
-	private static void FirstNonRepeatedCharacter(String str) {
-		Map<Character, Integer> charCount = new HashMap<>();
-        for (char c : str.toCharArray()) {
-            charCount.put(c, charCount.getOrDefault(c, 0) + 1);
-        }
 
-        for (char c : str.toCharArray()) {
-            if (charCount.get(c) == 1) {
-                System.out.println(c);
-            }
-        }
-        System.out.println("No character repeated");
+	private static void firstNonRepeatedCharacter(String str) {
+		Map<Character, Integer> charCount = new HashMap<>();
+		for (char ch : str.toCharArray()) {
+			charCount.put(ch, charCount.getOrDefault(ch, 0) + 1);
+		}
+
+		for (char ch : str.toCharArray()) {
+			if (charCount.get(ch) == 1) {
+				System.out.println("First non repeating character:" + ch);
+				break;
+			}
+
+		}
+//        System.out.println("No character repeated");
 	}
 
 	private static void countString(String s1, char s2) {

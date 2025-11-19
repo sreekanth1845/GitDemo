@@ -1,4 +1,4 @@
-package oopProject;
+package oops;
 
 public class AnimalDog {
 

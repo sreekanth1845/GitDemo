@@ -1,8 +1,12 @@
 package demoProject;
 
+import java.math.BigInteger;
+
 public class SumPrime {
 
 	public static void main(String[] args) {
+		
+		prime(13);
 
 		int num1 = 1;
 		int num2 = 100;
@@ -24,5 +28,12 @@ public class SumPrime {
 		}
 
 		System.out.println(sum);
+		
+		
+	}
+
+	private static void prime(int num) {
+	
+		
 	}
 }

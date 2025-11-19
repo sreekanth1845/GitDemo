@@ -11,12 +11,10 @@ public class SortingArray {
 
 		int temp;
 
-		int[] a = { 2, 6, 1, 4, 9 };
+		int[] a = { 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2 };
 
 		for (int i = 0; i < a.length; i++) {
-
 			for (int j = i + 1; j < a.length; j++) {
-
 				if (a[i] > a[j]) {
 
 					temp = a[i];
@@ -32,7 +30,7 @@ public class SortingArray {
 
 		System.out.println("Descending order");
 		for (int n = a.length - 1; n >= 0; n--)
-			System.out.println(a[n]);	// descending order
+			System.out.println(a[n]); // descending order
 	}
 
 }
