@@ -21,9 +21,8 @@ public class Unique {
 				count++;
 
 				for (int j = i + 1; j <= a.length - 1; j++) {
-					if (a[i] == a[j]) {
+					if (a[i] == a[j]) 
 						count++;
-					}
 				}
 //				System.out.println(a[i]);
 //				System.out.println(count);

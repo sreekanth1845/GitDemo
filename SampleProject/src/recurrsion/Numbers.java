@@ -10,13 +10,13 @@ public class Numbers {
 	}
 
 	private static void numberRecursion(int num) {
-		if(num < 1)
-			return ;
-		
-		//System.out.println(num );
-		numberRecursion(num -1);
+		if (num < 1)
+			return;
+
+		// System.out.println(num );
+		numberRecursion(num - 1);
 		System.out.println(num);
-		
+
 	}
 
 }

@@ -31,7 +31,5 @@ public class Reverse {
 			System.out.print(num % 10);
 			reverseUsingRecurrsion(num / 10);
 		}
-
 	}
-
 }
