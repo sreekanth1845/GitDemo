@@ -19,6 +19,7 @@ public class ECommerceAPITest {
 
 	public static void main(String[] args) {
 
+		//User login
 		RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")
 				.setContentType(ContentType.JSON).build();
 
@@ -33,8 +34,7 @@ public class ECommerceAPITest {
 		String userId = loginResponse.getUserId();
 		System.out.println(token);
 		
-		//Add Product
-		
+		//Add Product		
 		RequestSpecification addProduct = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addHeader("authorization", token).build();
 		
 		RequestSpecification reqAddProduct = given().log().all().spec(addProduct).param("productName", "qwerty").param("productAddedBy", userId).param("productCategory", "fashion")
@@ -49,7 +49,6 @@ public class ECommerceAPITest {
 		System.out.println(productId);
 		
 		//Create Order
-		
 		RequestSpecification reqCreate = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addHeader("authorization", token).setContentType(ContentType.JSON).build();
 		
 		OrderDetails orderDetails = new OrderDetails();
@@ -67,7 +66,6 @@ public class ECommerceAPITest {
 		System.out.println(orderResponse);
 		
 		//Delete Product
-		
 		RequestSpecification reqDelete = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addHeader("authorization", token).setContentType(ContentType.JSON).build();
 		
 		RequestSpecification reqDeleteProduct = given().log().all().spec(reqDelete).pathParam("productId", productId);

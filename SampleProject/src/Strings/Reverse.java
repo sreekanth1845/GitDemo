@@ -2,13 +2,15 @@ package Strings;
 
 public class Reverse {
 
-	public static String str = "Hello World";
-
 	public static void main(String[] args) {
+		//String str = "Hello World";
+		String str = "Welcome to Wipro Technologies";
 
 		reverseString(str);
 		reverseEachCharacter(str);
 		reverseEachWord(str);
+		reverseWord(str);
+		reverseUsingStringBuilder(str);
 	}
 
 	public static void reverseString(String str) {
@@ -28,7 +30,7 @@ public class Reverse {
 
 		for (int i = 0; i < words.length; i++) {
 			String word = words[i];
-			
+
 			String revWord = "";
 
 			for (int j = word.length() - 1; j >= 0; j--) {
@@ -37,6 +39,30 @@ public class Reverse {
 			revString = revString + revWord + " ";
 		}
 		System.out.println("reverseEachCharacter:" + revString);
+
+	}
+	
+	private static void reverseWord(String str) {
+		String[] words = str.split(" ");
+		
+		for(int i=words.length-1; i>=0; i--)
+			System.out.print(words[i] + " ");
+		
+	}
+
+	private static void reverseUsingStringBuilder(String str) {
+		String[] words = str.split(" ");
+
+		StringBuilder revStr = new StringBuilder();
+
+		for (int i = words.length - 1; i >= 0; i--) {
+			revStr.append(words[i]);
+
+			if (i > 0)
+				revStr.append(" ");
+		}
+
+		//System.out.println(revStr.toString());
 
 	}
 

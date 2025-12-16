@@ -16,7 +16,5 @@ public class Numbers {
 		// System.out.println(num );
 		numberRecursion(num - 1);
 		System.out.println(num);
-
 	}
-
 }

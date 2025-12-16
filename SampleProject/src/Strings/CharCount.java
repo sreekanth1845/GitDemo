@@ -1,6 +1,7 @@
 package Strings;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class CharCount {
@@ -9,6 +10,7 @@ public class CharCount {
 
 		duplicateCharacters("My name is Srikanth");
 		firstNonRepeatedCharacter("mummy");
+		occuranceOfEachCharacterReverse("Srikanth");
 
 		countString("sree", 'e');
 
@@ -45,6 +47,22 @@ public class CharCount {
 			if (entry.getValue() > 1) // for duplicate characters
 				System.out.println(entry.getKey() + "=" + entry.getValue());
 		}
+	}
+
+	private static void occuranceOfEachCharacterReverse(String str) {
+		StringBuilder revStr = new StringBuilder(str);
+		String rev = revStr.reverse().toString();
+		System.out.println(rev);
+
+		LinkedHashMap<Character, Integer> map = new LinkedHashMap<Character, Integer>();
+
+		for (char ch : rev.toCharArray())
+			map.put(ch, map.getOrDefault(ch, 0) + 1);
+
+		for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+			System.out.println(entry.getValue() + "=" + entry.getKey());
+		}
+
 	}
 
 	private static void firstNonRepeatedCharacter(String str) {

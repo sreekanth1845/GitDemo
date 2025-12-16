@@ -10,7 +10,7 @@ public class Largest {
 
 		System.out.println(secondLargest(arr));
 		
-		int[] num = { 12, 35, 1, 10, 34, 1 };
+		int[] num = {12, 35, 1, 10, 34, 2, 1};
 		Arrays.sort(num);
 		System.out.println(num[num.length-2]);
 	}
@@ -26,6 +26,5 @@ public class Largest {
 		}
 
 		return -1;
-
 	}
 }
